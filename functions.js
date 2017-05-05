@@ -8,8 +8,6 @@ function addTask(task) {
   return data
 }
 
-
-
 function deleteTask(deleteId) {
 
     var itemToDelete = data.find(function(item){
