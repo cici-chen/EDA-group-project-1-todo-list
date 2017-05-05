@@ -2,10 +2,9 @@ const data = require('./data.json')
 const fs = require('fs')
 
 function addTask(task) {
-  data.push(task)
-
-  updateJSON(data)
-  return data
+   data.push(task)
+   updateJSON(data)
+   return data
 }
 
 function deleteTask(deleteId) {
@@ -13,6 +12,7 @@ function deleteTask(deleteId) {
     var itemToDelete = data.find(function(item){
       return item.id == deleteId
     })
+
     var indexToDelete = data.indexOf(itemToDelete)
     data.splice((indexToDelete),1)
     updateJSON(data)
@@ -20,8 +20,10 @@ function deleteTask(deleteId) {
 
 function editTask(editID, currData, req){
     var itemToEdit = currData.find(function(item){
+
       return item.id == editID
     })
+
     var updatedTask = {
       "id": editID,
       "task": req.task,
@@ -31,11 +33,11 @@ function editTask(editID, currData, req){
 
    for(var i=0; i< currData.length; i++){
 		if(currData[i].id == editID){
-			currData[i] = updatedTask
+            currData[i] = updatedTask
 		}
-	}
-   updateJSON(currData);
+    }
 
+   updateJSON(currData);
 }
 
 function updateJSON(newData){
