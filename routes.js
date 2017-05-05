@@ -40,7 +40,6 @@ router.get('/edit/:id', (req, res) => {
   var itemToEdit = data.find(function(item){
     return item.id == editId
   })
-  console.log(itemToEdit)
   res.render('edit', itemToEdit)
 })
 
@@ -49,7 +48,7 @@ router.post('/edit/:id', (req, res) => {
   var itemToEdit = data.find(function(item){
     return item.id == editId
   })
-  for (key in itemToEdit) {
+  for (key in req.body) {
     itemToEdit[key] = req.body[key]
   }
   console.log(req.body)
