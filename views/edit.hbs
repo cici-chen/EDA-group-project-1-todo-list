@@ -1,0 +1,19 @@
+<div class="container">
+  <h3>Currently editing:</h3>
+  <h3>{{task}}, {{priority}}, {{status}}</h3>
+  <form class="" action="/edit/{{id}}" method="post">
+    <input type="text" name="task" value="{{task}}">
+    <select class="" name="priority">
+      <option value="Low">Low</option>
+      <option value="Medium" selected>Medium</option>
+      <option value="High">High</option>
+    </select>
+    <!-- <input type="text" name="priority" value="{{priority}}"> -->
+    <select class="" name="status">
+      <option value="New">New</option>
+      <option value="Done">Done</option>
+    </select>
+    <!-- <input type="text" name="status" value="{{status}}"> -->
+    <input type="submit" name="edit" value="Submit">
+  </form>
+</div>

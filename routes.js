@@ -34,4 +34,25 @@ router.get('/delete/:id', (req, res) => {
   data.splice((indexToDelete),1)
   res.redirect('/')
 })
+
+router.get('/edit/:id', (req, res) => {
+  var editId = req.params.id
+  var itemToEdit = data.find(function(item){
+    return item.id == editId
+  })
+  console.log(itemToEdit)
+  res.render('edit', itemToEdit)
+})
+
+router.post('/edit/:id', (req, res) => {
+  var editId = req.params.id
+  var itemToEdit = data.find(function(item){
+    return item.id == editId
+  })
+  for (key in itemToEdit) {
+    itemToEdit[key] = req.body[key]
+  }
+  console.log(req.body)
+  res.redirect('/')
+})
 module.exports = router
