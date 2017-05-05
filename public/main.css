@@ -1,0 +1,52 @@
+th {
+  background-color: #ffcc66;
+  color: white;
+}
+body {
+  margin: 5px auto;
+}
+
+.container a {
+  cursor: pointer;
+  text-decoration: none;
+}
+.container {
+  max-width: 800px;
+}
+
+.status {
+  color: white;
+  font-weight: bold;
+}
+
+.priority  {
+  color: white;
+  font-weight: bold;
+
+}
+
+
+
+.Low {
+  background-color: #ccc;
+}
+
+.Medium {
+  background-color: orange;
+
+}
+
+.High {
+  background-color: red;
+
+}
+
+.New {
+  background-color: #cc0066;
+
+}
+
+.Done {
+  background-color: green;
+
+}

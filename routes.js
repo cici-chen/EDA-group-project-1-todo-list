@@ -25,5 +25,13 @@ router.post('/', (req, res) => {
   res.redirect('/')
 })
 
-
+router.get('/delete/:id', (req, res) => {
+  var deleteId=req.params.id
+  var itemToDelete = data.find(function(item){
+    return item.id == deleteId
+  })
+  var indexToDelete = data.indexOf(itemToDelete)
+  data.splice((indexToDelete),1)
+  res.redirect('/')
+})
 module.exports = router
