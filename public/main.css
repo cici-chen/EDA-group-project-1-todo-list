@@ -3,7 +3,14 @@ th {
   color: white;
 }
 body {
+  font-family: 'Source Sans Pro', sans-serif;
   margin: 5px auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 5em;
+  font-weight: 700;
 }
 
 .container a {
@@ -11,7 +18,12 @@ body {
   text-decoration: none;
 }
 .container {
+  margin: 0 auto;
   max-width: 800px;
+}
+
+table {
+  margin-top: 20px;
 }
 
 .status {
@@ -22,10 +34,7 @@ body {
 .priority  {
   color: white;
   font-weight: bold;
-
 }
-
-
 
 .Low {
   background-color: #ccc;
@@ -33,17 +42,14 @@ body {
 
 .Medium {
   background-color: orange;
-
 }
 
 .High {
   background-color: red;
-
 }
 
 .New {
   background-color: #cc0066;
-
 }
 
 .Done {

@@ -19,9 +19,7 @@ router.post('/', (req, res) => {
     "priority": "Medium",
     "status": "New"
   }
-  console.log(newObj);
   funcs.addTask(newObj)
-  console.log(data)
   res.redirect('/')
 })
 
@@ -51,7 +49,6 @@ router.post('/edit/:id', (req, res) => {
   for (key in req.body) {
     itemToEdit[key] = req.body[key]
   }
-  console.log(req.body)
   res.redirect('/')
 })
 module.exports = router
