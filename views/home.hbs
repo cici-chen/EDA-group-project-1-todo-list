@@ -1,0 +1,29 @@
+<h4>To Do List</h4>
+
+<div class="container">
+
+  <table class="w3-table w3-striped w3-border">
+    <tr>
+      <th>Task</th>
+      <th>Priority</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+    {{#each data}}
+    <tr>
+      <td><a href="/edit/{{id}}" title="click to edit">{{task}}</a></td>
+      <td class="{{priority}} priority">{{priority}}</td>
+      <td class="{{status}} status">{{status}}</td>
+      <td>
+        <button  onclick="location.href='/delete/{{id}}';">Delete</button>
+      </td>
+   </tr>
+    {{/each}}
+
+    <form class="" action="/" method="post">
+      <input type="text" name="newTask" placeholder="Add new task here" size="50">
+      <input type="submit" name="submitTask" value="Add">
+    </form>
+
+
+</div>

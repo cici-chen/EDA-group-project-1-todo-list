@@ -1,0 +1,4 @@
+[{"id":1, "task": "Wash clothes", "priority":"Low", "status": "New" },
+ {"id":2, "task": "Visit Hagrid", "priority":"High", "status": "New" },
+ {"id":3, "task": "Buy a new wand", "priority":"Medium", "status": "Done"},
+ {"id":4, "task": "Go to dark forest", "priority":"Medium", "status": "New"}]

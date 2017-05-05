@@ -1,0 +1,65 @@
+th {
+  background-color: #ffcc66;
+  color: white;
+}
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 5px auto;
+  text-align: center;
+  background-image: url(cream.jpg);
+}
+
+h1 {
+  font-size: 5em;
+  font-weight: 700;
+}
+
+.container a {
+  cursor: pointer;
+  text-decoration: none;
+}
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+table {
+  margin-top: 20px;
+  background: white;
+}
+
+form {
+  margin-top: 3em;
+  margin-bottom: 2em;
+}
+
+.status {
+  color: white;
+  font-weight: bold;
+}
+
+.priority  {
+  color: white;
+  font-weight: bold;
+}
+
+.Low {
+  background-color: #ccc;
+}
+
+.Medium {
+  background-color: orange;
+}
+
+.High {
+  background-color: red;
+}
+
+.New {
+  background-color: #cc0066;
+}
+
+.Done {
+  background-color: green;
+
+}
