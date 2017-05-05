@@ -9,13 +9,9 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
   var newId = data.length + 1
-  var newObj = {
-    "id": newId,
-    "task": req.body.newTask,
-    "priority": "Medium",
-    "status": "New"
-  }
-  funcs.addTask(newObj)
+  var newTask = req.body.newTask
+
+  funcs.addTask(newId, newTask)
   res.redirect('/')
 })
 

@@ -1,8 +1,14 @@
 const data = require('./data.json')
 const fs = require('fs')
 
-function addTask(task) {
-   data.push(task)
+function addTask(newId, newTask) {
+   var newObj = {
+      "id": newId,
+      "task": newTask,
+      "priority": "Medium",
+      "status": "New"
+   }
+   data.push(newObj)
    updateJSON(data)
    return data
 }
