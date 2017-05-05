@@ -7,10 +7,6 @@ router.get('/', (req, res) => {
   res.render('home', {data})
 })
 
-router.get('/other', (req, res) => {
-  res.render('other')
-})
-
 router.post('/', (req, res) => {
   var newId = data.length + 1
   var newObj = {
@@ -25,11 +21,7 @@ router.post('/', (req, res) => {
 
 router.get('/delete/:id', (req, res) => {
   var deleteId=req.params.id
-  var itemToDelete = data.find(function(item){
-    return item.id == deleteId
-  })
-  var indexToDelete = data.indexOf(itemToDelete)
-  data.splice((indexToDelete),1)
+  funcs.deleteTask(deleteId);
   res.redirect('/')
 })
 
@@ -43,12 +35,7 @@ router.get('/edit/:id', (req, res) => {
 
 router.post('/edit/:id', (req, res) => {
   var editId = req.params.id
-  var itemToEdit = data.find(function(item){
-    return item.id == editId
-  })
-  for (key in req.body) {
-    itemToEdit[key] = req.body[key]
-  }
+  funcs.editTask(editId, data, req.body);
   res.redirect('/')
 })
 module.exports = router
